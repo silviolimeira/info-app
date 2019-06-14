@@ -1,0 +1,5 @@
+# Criar uma tag da versão
+git tag -a v1.0 -m "version base"
+
+# To push a single tag:
+git push origin v1.0
