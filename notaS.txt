@@ -1,0 +1,90 @@
+
+Create the sample application:
+$ ionic start hacker-news-app-v4 blank --package-id=io.vividcode.ionic4.hnc --type angular --cordova --no-link
+
+Support for android or IOS:
+$ ionic cordova platform add android --save
+$ ionic cordova platform add ios --save
+
+Build the App for Production
+$ ng build --env=prod
+
+Run the App
+$ ionic -c serve --browser=chrome --port=8100
+
+   The two components are added to the module components that are created using
+the following command. The option --flat false means generating a separate
+directory for the module.
+$ ng g module components --flat false
+
+Generate Item Component
+$ ng g component components/item --flat false
+
+Generate Pipe TimeAgo
+$ ng g pipe components/TimeAgo --flat false
+
+Install moment
+$ npm install moment
+
+Generate Items Component
+$ ng g component components/items --flat false
+
+Debugging of unit tests easier:
+$ ng test --source-map=false
+
+Generating services module
+$ ng g module services --flat false
+   after create we need to modify file app.module.ts to add the impport
+of the created ServicesModule.
+
+Generating service item
+$ ngg module services --flat false
+$ ng g service services/item -m services --flat false
+
+Generating Top Stories page 
+$ ng g module top-stories --routing
+$ ng g component top-stories -m top-stories
+
+Generate Items Loading Service Mock
+$ touch src/app/services/item/item.service.mock.ts
+Install lodash.range
+$ npm i lodash.range
+
+# Iniciando o mongodb no modo replica set 
+# https://blog.usejournal.com/using-mongodb-as-realtime-db-with-nodejs-c6f52c266750
+$ mongod --port 27017 --replSet rs0
+# verificando o funcionamento no cliente mongo
+$ mongo
+$ rs.initiate()
+
+# Criando a capped colletion:
+$ db.createCollection("messages",{capped:true,size:10000})
+ 
+# Inserindo um registro
+$ db.messages.insert({ type: 1, message: "Teste"})
+
+# Listando registros
+$ db.cappedCollection.find().sort( { $natural: -1 } )
+
+# https://pusher.com/tutorials/mongodb-change-streams
+
+
+## Change Streams With mongodb
+https://dzone.com/articles/change-streams-with-mongodb
+
+
+#===Research Push Notifications
+
+ https://medium.com/hirewithparam/independent-notification-service-using-ionic-node-fcm-5cdde219480a
+
+ https://www.airpair.com/ionic-framework/posts/push-notifications-using-ionic-framework
+
+ https://www.joshmorony.com/sending-push-notifications-with-the-phonegap-push-plugin-in-capacitor/
+
+ https://ionicacademy.com/ionic-4-local-notifications/
+  https://ionicframework.com/docs/native/local-notifications
+
+
+https://devdactic.com/ionic-realtime-socket-io/
+
+https://www.techiediaries.com/ionic-http/
