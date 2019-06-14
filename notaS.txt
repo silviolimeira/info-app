@@ -1,6 +1,6 @@
 
 Create the sample application:
-$ ionic start hacker-news-app-v4 blank --package-id=io.vividcode.ionic4.hnc --type angular --cordova --no-link
+$ ionic start app-name blank --package-id=io.dominio.app.name --type angular --cordova --no-link
 
 Support for android or IOS:
 $ ionic cordova platform add android --save
