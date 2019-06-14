@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { HelloComponent } from "../components/hello/hello.component";
+import { HelloService } from "./hello/hello.service";
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule],
+  providers: [HelloService]
 })
-export class ServicesModule { }
+export class ServicesModule {}
