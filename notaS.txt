@@ -38,7 +38,7 @@ $ ng g module services --flat false
 of the created ServicesModule.
 
 Generating service item
-$ ngg module services --flat false
+$ ngg  module services --flat false
 $ ng g service services/item -m services --flat false
 
 Generating Top Stories page 
