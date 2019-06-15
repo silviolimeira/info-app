@@ -18,12 +18,14 @@ import { environment } from "../environments/environment";
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    IonicModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [
-    // StatusBar,
-    // SplashScreen,
-    // { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    StatusBar,
+    SplashScreen,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
